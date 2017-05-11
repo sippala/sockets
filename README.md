@@ -1,5 +1,5 @@
 # sockets 
-# Parts of code have been taken from Internet and modified, I don't take complete ownership of this code, credit to those who did. 
+Parts of code have been taken from Internet and modified, I don't take complete ownership of this code, credit to those who did. 
 
 Client and Server socket programs to replicate Telnet/SSH sessions. After succesful Authentication, Client sends a command (like pwd, cp etc) that server receives, executes it and replies back so you aren't SSHing into the machine actually but getting things done as SSH does. 
 
@@ -9,7 +9,8 @@ To compile client and server, use:  gcc -o client client.c -lssl -lcrypto (same 
 
 Usage-   ./server <port> password.txt 
          ./client localhost <port> <username> <password> 
- # username and password here are Silva and ManCity respectively (case sensitive)
+ 
+ username and password here are Silva and ManCity respectively (case sensitive)
              
 •	Silva and the sha1 hash of ManCity are specified in the password.txt file, if the client sends any other username/password combination, server will not start a connection. 
 •	5 simultaneous connections can be done i.e server can connect to multiple clients this number can be increased by changing the value in msock() function in server.c
